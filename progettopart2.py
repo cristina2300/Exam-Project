@@ -2,11 +2,10 @@ import pandas as pd
 
 diseasedata = pd.read_csv('disease_evidences.tsv.gz',sep = '\t')
 disease_evidences = pd.DataFrame(diseasedata)
-print(disease_evidences)
 
 genedata = pd.read_csv('gene_evidences.tsv.gz', sep = '\t')
 gene_evidences = pd.DataFrame(genedata)
-print(gene_evidences)
+
 
 #PARTE 2 
 
@@ -25,11 +24,6 @@ class DataCollection:         #punto 1 e punto 2
       
         return a, b
 
-#dimension_diseasedata = DataCollection(disease_evidences, gene_evidences)
-#print(dimension_diseasedata.shape())
-
-#dimension_genedata = DataCollection(gene_evidences, disease_evidences)
-#print(dimension_genedata.get_label()) 
 
 
 
@@ -59,13 +53,7 @@ class Detection:
     
     return (f"there are {len(l1)} different diseases with names {l1}")
  
-    
-      
-#detection = Detection(gene_evidences)
-#print(detection.genesymbol_detect())
 
-#detection_disease = Detection(disease_evidences)
-#print(detection.diseasename_detect())
 
 class Sentence:
     def __init__ (self, dataframe,n): 
@@ -123,7 +111,6 @@ class AssociationList:
         
     def association(self):
         result = pd.DataFrame.merge(self._datag, self._datad)
-        #result = 
         
        
         stringresult = result[['geneid','diseaseid','gene_symbol', 'disease_name']].astype(str)
@@ -166,24 +153,7 @@ class AssociationList:
        
                
 
-       
-inputs = input("insert a gene id or symbol: ")
-#data = pd.DataFrame.merge(gene_evidences, disease_evidences)
-print(AssociationList(gene_evidences, disease_evidences, inputs).association())
 
-print(type(inputs))
-
-
-
-
-
-print(TopTen(gene_evidences, disease_evidences).top_ten())   
-      
-      
-n = input("Insert a gene ID or symbol or a disease ID or name: ")
-dataframe = pd.DataFrame(gene_evidences)
-sentences = Sentence(dataframe,n)
-print(sentences.find_sentenceg())
 
 
 
