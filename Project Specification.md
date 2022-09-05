@@ -4,6 +4,11 @@ Progettopart1.py is the first file with the code containing part1 of the project
 
 It contains a one class only named **Registry** which contains all of the operations that can be performed on the datasets contained in part2.
 
+We used 2 different datasets:
+
+- [disease evidences](https://github.com/anuzzolese/genomics-unibo/blob/master/2020-2021/project/dataset/disease_evidences.tsv.gz)
+- [gene evidences](https://github.com/anuzzolese/genomics-unibo/blob/master/2020-2021/project/dataset/gene_evidences.tsv.gz)
+
 We used Pandas in order to read the data in a dataframe format and to also use specific functions and methods.
 
 In the code of *progettopart1.py* we first import everything (*) from the file *progettopart2* corresponding to part2 and then we also import pandas as pd. 
