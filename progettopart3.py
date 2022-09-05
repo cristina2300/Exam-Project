@@ -30,6 +30,11 @@ def ThirdPage():
 	output = Registry().genes()
 	return render_template('4genes.html', result = output)
  
+@app.route('InG')
+def InputGenePage():
+	output = Registry().inputg()
+	return render_template('inputdiseasesentences.html', result = output) 
+
 @app.route('/SG') #sentenceg info
 def FourthPage():
 	output = Registry().sentenceg().find_sentenceg(request.args.get('gene'))
@@ -39,6 +44,10 @@ def FourthPage():
 def FifthPage():
 	output = Registry().diseases()
 	return render_template('6disease.html', result = output)
+@app.route('InD')
+def InputDiseasePage():
+	output = Registry().inputd()
+	return render_template('inputgenesentences.html', result = output) 
  
 @app.route('/SD') #sentenced info
 def SixthPage():
