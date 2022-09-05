@@ -66,7 +66,7 @@ If the match is found in a gene symbol or ID, the corresponding disease name is 
 
 At the end *final_list* is chosen and returned to the user.
 
-## **progettopart3.py**
+## *progettopart3.py*
 Progettopart3.py is the last file of the code that imports part1 (Registry). Part3 aims to present all of the operations (as hyperlinks) that can be performed on the datasets. The operations are enabled by render template that connects the HTML pages to the hyperlinks in part1. In this way it is indirectly connected to part2. 
 
 1. **/**:
@@ -104,10 +104,10 @@ The folder html contains all the HTML pages:
 - 10diseasetogene.html
 
 Each of them is composed of:
-- *Text-decoration properties:* used to set the text color, line and style.
-- *Headings:* titles or  subtitles displayed on the webpage.
-- *Buttons:* connecting Homepage and Secondary pages together.
-- *Footer:* contains names of the contributors.
+- ***Text-decoration properties:*** used to set the text color, line and style.
+- ***Headings:*** titles or  subtitles displayed on the webpage.
+- ***Buttons:*** connecting Homepage and Secondary pages together.
+- ***Footer:*** contains names of the contributors.
 
 
 
