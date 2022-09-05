@@ -32,7 +32,7 @@ def ThirdPage():
  
 @app.route('/SG') #sentenceg info
 def FourthPage():
-	output = Registry().sentenceg()
+	output = Registry().sentenceg().find_sentenceg(request.args.get('gene'))
 	return render_template('5genesentences.html', result = output)
  
 @app.route('/Diseases') #diseases info
@@ -42,7 +42,7 @@ def FifthPage():
  
 @app.route('/SD') #sentenced info
 def SixthPage():
-	output = Registry().sentenced()
+	output = Registry().sentenced().find_sentenced(request.args.get('disease'))
 	return render_template('7diseasesentences.html', result = output)
  
 @app.route('/Top') #top10 info
