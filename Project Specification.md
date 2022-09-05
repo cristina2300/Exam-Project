@@ -67,41 +67,54 @@ If the match is found in a gene symbol or ID, the corresponding disease name is 
 At the end *final_list* is chosen and returned to the user.
 
 ## *progettopart3.py*
-Progettopart3.py is the last file of the code that imports part1 (Registry). Part3 aims to present all of the operations (as hyperlinks) that can be performed on the datasets. The operations are enabled by render template that connects the HTML pages to the hyperlinks in part1. In this way it is indirectly connected to part2. 
+Progettopart3.py is the last file of the code that imports part1 (Registry). 
+
+Part3 aims to present all of the operations (as hyperlinks) that can be performed on the datasets. 
+
+The operations are enabled by render template that connects the HTML pages to the hyperlinks in part1. In this way it is indirectly connected to part2. 
 
 1. **/**:
 Shows the nine possible operations that can be selected.
+
 2. **/Meta**:
-Shows the output of DataCollection(datag, datad).shape()
+Shows the output of *DataCollection(datag, datad).shape()*
+
 3. **/Sem**:
-Shows the output of DataCollection(datag, datad).get_label()
+Shows the output of *DataCollection(datag, datad).get_label()*
+
 4. **/Genes**:
-Shows the output of Detection(datag).genesymbol_detect()
+Shows the output of *Detection(datag).genesymbol_detect()*
+
 5. **/SG**:
-Shows the output of Sentence(datag).findsentence_g()
+Shows the output of *Sentence(datag).findsentence_g()*
+
 6. **/Diseases**:
-Shows the output of Detection(datad).diseasename_detect()
+Shows the output of *Detection(datad).diseasename_detect()*
+
 7. **/SD**:
-Shows output of Sentence(datad).findsentence_d()
+Shows output of *Sentence(datad).findsentence_d()*
+
 8. **/Top**:
-Shows output of TopTen(datag, datad).top_ten()
+Shows output of *TopTen(datag, datad).top_ten()*
+
 9. **/GetoDis**:
-Shows the output of AssociationList(datag).association()
+Shows the output of *AssociationList(datag).association()*
+
 10. **/DistoGe**:
-Shows the output of AssociationList(datad).association()
+Shows the output of *AssociationList(datad).association()*
 
 The folder html contains all the HTML pages:
 
-- 1homepage.html
-- 2metadata.html
-- 3semantics.html
-- 4genes.html
-- 5genesentences.html
-- 6diseases.html
-- 7diseasesentences.html
-- 8top10.html
-- 9genetodisease.html
-- 10diseasetogene.html
+- [1homepage.html](https://github.com/cristina2300/Exam-Project/blob/main/html/1homepage.html)
+- [2metadata.html](https://github.com/cristina2300/Exam-Project/blob/main/html/2metadata.html)
+- [3semantics.html](https://github.com/cristina2300/Exam-Project/blob/main/html/3semantics.html)
+- [4genes.html](https://github.com/cristina2300/Exam-Project/blob/main/html/4genes.html)
+- [5genesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html/5genesentences.html)
+- [6diseases.html](https://github.com/cristina2300/Exam-Project/blob/main/html/6diseases.html)
+- [7diseasesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html/7diseasesentences.html)
+- [8top10.html](https://github.com/cristina2300/Exam-Project/blob/main/html/8top10.html)
+- [9genetodisease.html](https://github.com/cristina2300/Exam-Project/blob/main/html/9genetodisease.html)
+- [10diseasetogene.html](https://github.com/cristina2300/Exam-Project/blob/main/html/10diseasetogene.html)
 
 Each of them is composed of:
 - ***Text-decoration properties:*** used to set the text color, line and style.
@@ -111,9 +124,14 @@ Each of them is composed of:
 
 
 
-*Presented and designed by Genomics’ second year students:
-Ashley Claire Lipparini, 
-Beatrice Ferretti, 
-Cristina Ilie, 
-Silia Gnesini.*
+*Presented and designed by Genomics’ second year students:*
+
+*Ashley Claire Lipparini,* 
+
+*Beatrice Ferretti,*
+
+*Cristina Ilie,*
+
+*Silia Gnesini.*
+
 
