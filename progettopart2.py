@@ -52,7 +52,29 @@ class Detection:
             l1.append(e)
     
     return (f"there are {len(l1)} different diseases with names {l1}")
- 
+
+
+
+class Inputg:
+   def __init__(self, datag):
+        self.__datag = datag
+
+   def list_genes(self):
+        genes = self.__datag['gene_symbol']
+        list_genes = genes.drop_duplicates.tolist()
+        return list_genes
+
+
+       
+class Inputd:
+    def __init__(self,datad):
+        self.__datad = datad
+
+   def list_diseases(self):
+        diseases = self.__datad['disease_name']
+        list_diseases = diseases.drop_duplicates.tolist()
+        return list_diseases
+    
 
 
 class Sentence:
