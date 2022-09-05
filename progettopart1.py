@@ -10,7 +10,7 @@ class Registry:
         self._operations = ['Metadata', 'Semantics', 'Genes', 'Diseases', 'List of sentences of genes related to COVID-19',
                             'List of sentences of diseases related to COVID-19', 'Top 10 associations',
                             'Disease list related to a gene symbol or ID', 'Gene list related to a disease name or ID']
-        self._hyperlinks  = ['Meta', 'Sem', 'Genes', 'Diseases', 'SG', 'SD', 'Top', 'GetoDis', 'DistoGe' ]
+        self._hyperlinks  = ['Meta', 'Sem', 'Genes', 'Diseases', 'inputg', 'SG', 'inputd', 'SD', 'Top', 'GetoDis', 'DistoGe' ]
         
         
         
@@ -25,6 +25,10 @@ class Registry:
             return DataCollection(self.__datad, self.__datag).get_label()
         def genes(self): #3
             return Detection(self.__datag).genesymbol_detect()
+        def inputg(self):
+            return Inputg(self.__datag).list_genes()
+        def inputd(self):
+            return Inputd(self.__datad).list_diseases()
         def sentenceg(self): #4 
             return Sentence(self.__datag).find_sentenceg()
         def diseases(self): #5
