@@ -1,6 +1,6 @@
 # Advanced Programming Project
 ## *progettopart1.py*
-Progettopart1.py is the first file with the code containing part1 of the project and it is connected with part2 (*progettopart2.py*).
+[Progettopart1.py](https://github.com/cristina2300/Exam-Project/blob/main/progettopart1.py) is the first file with the code containing part1 of the project and it is connected with part2 (*progettopart2.py*).
 
 It contains a one class only named **Registry** which contains all of the operations that can be performed on the datasets contained in part2.
 
@@ -17,7 +17,7 @@ Afterwards we defined the class and all the possible operations carried out on t
 
 
 ## *progettopart2.py*
-Progettopart2.py contains 5 different classes. 
+[Progettopart2.py](https://github.com/cristina2300/Exam-Project/blob/main/progettopart2.py) contains 5 different classes. 
 
 Each one has: the mandatory function *__init__()*, which is called constructor and can take multiple arguments; and additional specific functions. 
 
@@ -72,7 +72,7 @@ If the match is found in a gene symbol or ID, the corresponding disease name is 
 At the end *final_list* is chosen and returned to the user.
 
 ## *progettopart3.py*
-Progettopart3.py is the last file of the code that imports part1 (Registry). 
+[Progettopart3.py](https://github.com/cristina2300/Exam-Project/blob/main/progettopart3.py) is the last file of the code that imports part1 (Registry). 
 
 Part3 aims to present all of the operations (as hyperlinks) that can be performed on the datasets. 
 
@@ -108,7 +108,9 @@ Shows the output of *AssociationList(datag).association()*
 10. **/DistoGe**:
 Shows the output of *AssociationList(datad).association()*
 
-The folder html contains all the HTML pages:
+## HTML pages 
+
+The folder [html](https://github.com/cristina2300/Exam-Project/tree/main/html) contains all the HTML pages:
 
 - [1homepage.html](https://github.com/cristina2300/Exam-Project/blob/main/html/1homepage.html)
 - [2metadata.html](https://github.com/cristina2300/Exam-Project/blob/main/html/2metadata.html)
@@ -126,6 +128,22 @@ Each of them is composed of:
 - ***Headings:*** titles or  subtitles displayed on the webpage.
 - ***Buttons:*** connecting Homepage and Secondary pages together.
 - ***Footer:*** contains names of the contributors.
+
+
+## CRC cards
+We created a [folder](https://github.com/cristina2300/Exam-Project/tree/main/html) for the 5 CRC cards with their description:
+1. [AssociationList](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/AssociationList.png)
+2. [DataCollectoin](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/DataCollection.png)
+3. [Detection](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/Detection.png)
+4. [Sentence](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/Sentence.png)
+5. [TopTen](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/TopTen.png)
+
+## UML diagram 
+Finally we created the [UML diagram](https://github.com/cristina2300/Exam-Project/blob/main/UML%20diagram.jpeg) with Visual Paradigm.
+
+It represents the relationships among the classes created in *progettopart2.py* with the main and only class of *progettopart1.py* **Registry**.
+
+
 
 
 
