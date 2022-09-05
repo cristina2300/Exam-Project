@@ -32,39 +32,39 @@
                 <center><font face="Garamond" size="5" style="color:#FD577D;">Welcome user, this is the web page we created.</font></center><br></br>
                  <font class="under" face="Trebuchet MS" size="4.5" style="color:#63313A;">Choose an operation:</font>
                 <ol type="1"><li><font face="Garamond" size="4" class="FirstPage">Record the numerical metadata consisting of the number of rows and columns of each of the two files composing the data collection.</font></li></br>
-                <form method="get" action="/Meta">
+                <form method="get" action="2metadata.html">
                     <button class="button" type="submit" class="FirstPage">Metadata</button>
                 </form><br></br>
                 <li><font face="Garamond" size="4" class="SecondPage">Record the general semantics of the dataset, i.e. the labels of the columns of each of the two files composing the data collection.</font></li></br>
-                <form method="get" action="/Sem">
+                <form method="get" action="3semantics.html">
                     <button class="button" type="submit" class="SecondPage">Semantics</button>
                 </form><br></br>
                 <li><font face="Garamond" size="4" class="ThirdPage">Record the number of different genes detected in literature. The list is sorted in ascending order.</font></li></br>
-                <form method="get" action="/Genes">
+                <form method="get" action="4genes.html">
                     <button class="button" type="submit" class="ThirdPage">Genes</button>
                 </form><br></br>
                 <li><font class="FourthPage">Given a gene symbol, provide the list of sentences that are an evidence in literature about the relation of this gene with COVID-19.</font></li></br>
-                <form method="get" action="/SG">
+                <form method="get" action="5genesentences.html">
                     <button class="button" type="submit" class="FourthPage">Gene Sentences</button>
                 </form><br></br>
                 <li><font face="Garamond" size="4" class="FifthPage">Record the number of different diseases detected in literature. The list is sorted in ascending order.</font></li></br>
-                <form method="get" action="/Diseases">
+                <form method="get" action="6diseases.html">
                     <button class="button" type="submit" class="FifthPage">Diseases</button>
                 </form><br></br>
                 <li><font class="SixthPage">Given a disease ID, provide the list of sentences that are an evidence in literature about the relation of this disease with COVID-19.</font></li></br>
-                <form method="get" action="/SD">
+                <form method="get" action="7diseasesentences.html">
                     <button class="button" type="submit" class="SixthPage">Disease Sentences</button>
                 </form><br></br>
                 <li><font face="Garamond" size="4" class="SeventhPage">Record the 10-top most frequent distinct association between genes and diseases.</font></li></br>
-                <form method="get" action="/Top">
+                <form method="get" action="8top10.html">
                     <button class="button" type="submit" class="SeventhPage">Top 10</button>
                 </form><br></br>
                 <li><font class="EighthPage">Given a gene symbol, provide the list of diseases such a gene is associated with.</font></li></br>
-               <form method="get" action="/GeToDis">
+               <form method="get" action="9genetodisease.html">
                    <button class="button" type="submit" class="EighthPage">Gene to disease</button>
                </form><br></br>
                <li><font face="Garamond" size="4" class="NinthPage">Given a disease ID, provide the list of genes such a disease is associated with.</font></li></br>
-               <form method="get" action="/DisToGe">
+               <form method="get" action="10diseasetogene.html">
                 <button class="button" type="submit" class="NinthPage">Disease to gene</button>
                </form><br></br>
 
