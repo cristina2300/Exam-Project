@@ -5,12 +5,12 @@ from progettopart2 import *
 
 class Registry:
     def __init__(self):
-        self._datad = pd.read_csv('disease_evidences.tsv', sep= '\t')
-        self._datag = pd.read_csv('gene_evidences.tsv', sep = '\t')
-        self._operations = ['Metadata', 'Semantics', 'Genes', 'Diseases', 'List of sentences of genes related to COVID-19',
+        self.__datad = pd.read_csv('disease_evidences.tsv', sep= '\t')
+        self.__datag = pd.read_csv('gene_evidences.tsv', sep = '\t')
+        self.__operations = ['Metadata', 'Semantics', 'Genes', 'Diseases', 'List of sentences of genes related to COVID-19',
                             'List of sentences of diseases related to COVID-19', 'Top 10 associations',
                             'Disease list related to a gene symbol or ID', 'Gene list related to a disease name or ID']
-        self._hyperlinks  = ['Meta', 'Sem', 'Genes', 'Diseases', 'inputg', 'SG', 'inputd', 'SD', 'Top', 'GetoDis', 'DistoGe' ]
+        self.__hyperlinks  = ['Meta', 'Sem', 'Genes', 'Diseases', 'inputg', 'SG', 'inputd', 'SD', 'Top', 'GetoDis', 'DistoGe' ]
         
         
         
