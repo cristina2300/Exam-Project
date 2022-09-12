@@ -4,7 +4,7 @@
 from flask import Flask
 from flask import render_template
 from flask import request
-#user = request.form['user']
+
 from progettopart1 import Registry
 
 app = Flask(__name__)
@@ -17,7 +17,7 @@ def IndexPage():
  
 @app.route('/Meta') #metadata info
 def FirstPage():
-	output = Registry.metadata
+	output = Registry().metadata()
 	return render_template('2metadata.html', result = output)
 
 @app.route('/Sem') #semantics info
@@ -30,7 +30,7 @@ def ThirdPage():
 	output = Registry().genes()
 	return render_template('4genes.html', result = output)
  
-@app.route('InG')
+@app.route('/InG')
 def InputGenePage():
 	output = Registry().inputg()
 	return render_template('inputdiseasesentences.html', result = output) 
@@ -43,8 +43,9 @@ def FourthPage():
 @app.route('/Diseases') #diseases info
 def FifthPage():
 	output = Registry().diseases()
-	return render_template('6disease.html', result = output)
-@app.route('InD')
+	return render_template('6diseases.html', result = output)
+    
+@app.route('/InD')
 def InputDiseasePage():
 	output = Registry().inputd()
 	return render_template('inputgenesentences.html', result = output) 
@@ -53,7 +54,7 @@ def InputDiseasePage():
 def SixthPage():
 	output = Registry().sentenced().find_sentenced(request.args.get('disease'))
 	return render_template('7diseasesentences.html', result = output)
- 
+
 @app.route('/Top') #top10 info
 def SeventhPage():
 	output = Registry().top10()
@@ -68,5 +69,6 @@ def EighthPage():
 def NinthPage():
 	output = Registry().diseasetog()
 	return render_template('10diseasetogene.html', result = output)
+    
 if __name__ == '__main__':
     app.run()
