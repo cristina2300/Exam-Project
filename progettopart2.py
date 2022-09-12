@@ -11,16 +11,16 @@ gene_evidences = pd.DataFrame(genedata)
 
 class DataCollection:         #punto 1 e punto 2
     def __init__(self, dataframe1, dataframe2):
-        self._dataframe1 = dataframe1
-        self._dataframe2 = dataframe2
+        self.__dataframe1 = dataframe1
+        self.__dataframe2 = dataframe2
     
     def shape(self):
-        l = [self._dataframe1.shape , self._dataframe2.shape]
+        l = [self.__dataframe1.shape , self.__dataframe2.shape]
         return l
     
     def get_label(self):
-        a = list(self._dataframe1.columns.values)
-        b = list(self._dataframe2.columns.values)
+        a = list(self.__dataframe1.columns.values)
+        b = list(self.__dataframe2.columns.values)
       
         return a, b
 
@@ -29,7 +29,7 @@ class DataCollection:         #punto 1 e punto 2
 
 class Detection:
   def __init__(self, dataframe):
-    self._dataframe = dataframe
+    self.__dataframe = dataframe
     
 
   def genesymbol_detect(self):
@@ -70,7 +70,7 @@ class Inputd:
     def __init__(self,datad):
         self.__datad = datad
 
-   def list_diseases(self):
+    def list_diseases(self):
         diseases = self.__datad['disease_name']
         list_diseases = diseases.drop_duplicates.tolist()
         return list_diseases
@@ -79,13 +79,13 @@ class Inputd:
 
 class Sentence:
     def __init__ (self, dataframe,n): 
-        self._n = n
-        self._dataframe = dataframe
+        self.__n = n
+        self.__dataframe = dataframe
   
 
-    def find_sentenced(self):
+    def find_sentenced(self, n):
         disease_list = []
-        dataframe = self._dataframe[['sentence', 'diseaseid', 'disease_name']].astype(str)
+        dataframe = self.__dataframe[['sentence', 'diseaseid', 'disease_name']].astype(str)
   
         diseases = dataframe.disease_name.values.tolist()
         diseaseid= dataframe.diseaseid.values.tolist()
@@ -99,9 +99,9 @@ class Sentence:
     
         return sentence_list
   
-    def find_sentenceg(self):
+    def find_sentenceg(self, n):
         gene_list = []
-        dataframe = self._dataframe[['sentence', 'geneid', 'gene_symbol']].astype(str)
+        dataframe = self.__dataframe[['sentence', 'geneid', 'gene_symbol']].astype(str)
         genes = dataframe.gene_symbol.values.tolist()
         geneid =  dataframe.geneid.values.tolist()
         
@@ -115,11 +115,11 @@ class Sentence:
      
 class TopTen:
     def __init__(self, datag, datad):
-        self._datag = datag
-        self._datad = datad
+        self.__datag = datag
+        self.__datad = datad
     
     def top_ten(self):
-        result = pd.DataFrame.merge(self._datag, self._datad)
+        result = pd.DataFrame.merge(self.__datag, self.__datad)
         grouped = result.groupby(by = ["geneid","gene_symbol", "diseaseid", "disease_name"]).size().reset_index(name = 'counts').sort_values('counts', ascending = False)
         final_sorted = grouped.iloc[0:10, :]
         return final_sorted
@@ -127,12 +127,12 @@ class TopTen:
      
 class AssociationList:
     def __init__(self, datag, datad, inputs):
-        self._datag = datag
-        self._datad = datad
-        self._inputs = inputs
+        self.__datag = datag
+        self.__datad = datad
+        self.__inputs = inputs
         
     def association(self):
-        result = pd.DataFrame.merge(self._datag, self._datad)
+        result = pd.DataFrame.merge(self.__datag, self.__datad)
         
        
         stringresult = result[['geneid','diseaseid','gene_symbol', 'disease_name']].astype(str)
@@ -174,6 +174,10 @@ class AssociationList:
     
        
                
+
+
+
+
 
 
 
