@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="background-color: #FBE6EB;">
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    .button {
+                       display: inline-block;
+                        padding: 10px 30px;
+                        font-size: 20px;
+                        cursor: alias;
+                        text-align: center;
+                        color: #fff;
+                        background-color: #FD577D;
+                        border-radius: 10px;
+                        border-color: #933248;
+                        box-shadow: 0 5px #D5B3BB;
+                        }
+                    .button:hover {background-color: #933248}
+                    .button:active {
+                        background-color: #933248;
+                        box-shadow: 0 3px #D5B3BB;
+                        transform: translateY(2px);
+                </style>
+            </head>
+            <body>
+                <center><font class="under" face="Georgia" size="6" style="color:#933248;">Step 5: record the number of diseases; </font></center></br>
+                <center><font face="Garamond" size="6" style="color:#FD577D;">The list is sorted in ascending order.</font></center><br></br>
+
+    <font face="Times New Roman" size="5" style="color:#151415;">The diseases in disease_evidence.tsv file and their corresponding abundance are: {{result[0]}} </font><br></br>
+    <font face="Times New Roman" size="5" style="color:#151415;">The diseases with their names are:</font><br></br>
+    
+    {% for e in result[1] %}
+    <li><font face="Times New Roman" size="5" style="color:#151415;"> {{e}}</font></li>
+    <p></p>
+    {% endfor %}
+    <br></br>
+
+    <form method="get" action="/">
+       <center> <button class="button" type="submit">Back</button>
+    </form>
+          
+<br></br>
+<center><footer>
+  <p>Designed by Ashley Claire Lipparini, Beatrice Ferretti, Cristina Ilie, and Silia Gnesini</p>
+</footer></center>
+
+
+
+</body>
+</html>

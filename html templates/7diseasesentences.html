@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html style="background-color: #FBE6EB;">
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    .button {
+                        display: inline-block;
+                        padding: 10px 30px;
+                        font-size: 20px;
+                        cursor: alias;
+                        text-align: center;
+                        color: #fff;
+                        background-color: #FD577D;
+                        border-radius: 10px;
+                        border-color: #933248;
+                        box-shadow: 0 5px #D5B3BB;
+                        }
+                    .button:hover {background-color: #933248}
+                    .button:active {
+                        background-color: #933248;
+                        box-shadow: 0 3px #D5B3BB;
+                        transform: translateY(2px);
+                </style>
+            </head>
+            <body>
+                <center><font class="under" face="Georgia" size="6" style="color:#933248;">Given the disease symbol, this is the list of sentences about the connection of the disease with COVID-19.</font></center></br>
+
+    {% if result == [] %} 
+	<font face="Times New Roman" size="5" style="color:#151415;"> There is no association with COVID19. Try with another one. </font><br></br> 
+    {% else %}
+    {% for sentence in result %}
+    <li><font face="Times New Roman" size="5" style="color:#151415;">{{sentence}}</font></li>
+    <p></p>
+    {% endfor %}
+    {% endif %}
+
+    <br></br>
+    <form method="get" action="/InD">
+       <center> <button class="button" type="submit">Retry</button>
+    </form></br>
+<br></br>
+    <form method="get" action="/">
+       <center> <button class="button" type="submit">Main</button>
+    </form></br>
+<br></br>
+<center><footer>
+  <p>Designed by Ashley Claire Lipparini, Beatrice Ferretti, Cristina Ilie, and Silia Gnesini</p>
+</footer></center>
+
+</body>
+</html>
