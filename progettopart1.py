@@ -28,15 +28,15 @@ class Registry:
         return Inputg(self.__datag).list_genes()
     def inputd(self):
         return Inputd(self.__datad).list_diseases()
-    def sentenceg(self, n): #4 
-        return Sentence(self.__datag).find_sentenceg()
+    def sentenceg(self): #4 
+        return Sentence(self.__datag)
     def diseases(self): #5
         return Detection(self.__datad).diseasename_detect()
     def sentenced(self): #6 
-        return Sentence(self.__datad).find_sentenced()
+        return Sentence(self.__datad)
     def top10(self): #7
         return TopTen(self.__datad, self.__datag).top_ten()
     def genetod(self): #8 
-        return AssociationList(self.__datag, self.__datad).association()
+        return AssociationList(self.__datag, self.__datad)
     def diseasetog(self): #9 
-        return AssociationList(self.__datag, self.__datad).association()
+        return AssociationList(self.__datag, self.__datad)
