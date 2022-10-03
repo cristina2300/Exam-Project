@@ -1,9 +1,8 @@
 
-#This is part 3 
-
 from flask import Flask
 from flask import render_template
 from flask import request
+#user = request.form['user']
 
 from progettopart1 import Registry
 
@@ -33,7 +32,7 @@ def ThirdPage():
 @app.route('/InG')
 def InputGenePage():
 	output = Registry().inputg()
-	return render_template('inputdiseasesentences.html', result = output) 
+	return render_template('inputgenesentences.html', result = output) 
 
 @app.route('/SG') #sentenceg info
 def FourthPage():
@@ -48,7 +47,7 @@ def FifthPage():
 @app.route('/InD')
 def InputDiseasePage():
 	output = Registry().inputd()
-	return render_template('inputgenesentences.html', result = output) 
+	return render_template('inputdiseasesentences.html', result = output) 
  
 @app.route('/SD') #sentenced info
 def SixthPage():
@@ -59,15 +58,25 @@ def SixthPage():
 def SeventhPage():
 	output = Registry().top10()
 	return render_template('8top10.html', result = output)
+    
+@app.route('/InGetoDis') # input for gene to disease
+def InputEightPage():
+	output = Registry().inputg() 
+	return render_template('inputgenetodisease.html', result = output)
  
 @app.route('/GetoDis') #gene to disease info
 def EighthPage():
-	output = Registry().genetod()
+	output = Registry().genetod().associationgenes(request.args.get('gene'))
 	return render_template('9genetodisease.html', result = output)
+
+@app.route('/InDistoGe') # input for disease to gene
+def InputNinthPage():
+	output = Registry().inputd() 
+	return render_template('inputdiseasetogene.html', result = output)
  
 @app.route('/DistoGe') #disease to gene info
 def NinthPage():
-	output = Registry().diseasetog()
+	output = Registry().diseasetog().associationdisease(request.args.get('disease'))
 	return render_template('10diseasetogene.html', result = output)
     
 if __name__ == '__main__':
