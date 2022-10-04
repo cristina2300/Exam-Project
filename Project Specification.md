@@ -110,18 +110,22 @@ Shows the output of *AssociationList(datad).association()*
 
 ## HTML pages 
 
-The folder [html](https://github.com/cristina2300/Exam-Project/tree/main/html) contains all the HTML pages:
+The folder [html templates](https://github.com/cristina2300/Exam-Project/tree/main/html) contains all the HTML pages:
 
-- [1homepage.html](https://github.com/cristina2300/Exam-Project/blob/main/html/1homepage.html)
-- [2metadata.html](https://github.com/cristina2300/Exam-Project/blob/main/html/2metadata.html)
-- [3semantics.html](https://github.com/cristina2300/Exam-Project/blob/main/html/3semantics.html)
-- [4genes.html](https://github.com/cristina2300/Exam-Project/blob/main/html/4genes.html)
-- [5genesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html/5genesentences.html)
-- [6diseases.html](https://github.com/cristina2300/Exam-Project/blob/main/html/6diseases.html)
-- [7diseasesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html/7diseasesentences.html)
-- [8top10.html](https://github.com/cristina2300/Exam-Project/blob/main/html/8top10.html)
-- [9genetodisease.html](https://github.com/cristina2300/Exam-Project/blob/main/html/9genetodisease.html)
-- [10diseasetogene.html](https://github.com/cristina2300/Exam-Project/blob/main/html/10diseasetogene.html)
+- [1homepage.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/1homepage.html)
+- [2metadata.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/2metadata.html)
+- [3semantics.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/3semantics.html)
+- [4genes.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/4genes.html)
+- [inputgenesentences](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputgenesentences.html)
+- [5genesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/5genesentences.html)
+- [6diseases.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/6diseases.html)
+- [inputdiseasesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputdiseasesentences.html)
+- [7diseasesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/7diseasesentences.html)
+- [8top10.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/8top10.html)
+- [inputgenetodisease.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputgenetodisease.html)
+- [9genetodisease.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/9genetodisease.html)
+- [inputdiseasetogene](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputdiseasetogene.html)
+- [10diseasetogene.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/10diseasetogene.html)
 
 Each of them is composed of:
 - ***Text-decoration properties:*** used to set the text color, line and style.
@@ -131,7 +135,7 @@ Each of them is composed of:
 
 
 ## CRC cards
-We created a [folder](https://github.com/cristina2300/Exam-Project/tree/main/html) for the 5 CRC cards with their description:
+We created a [folder](https://github.com/cristina2300/Exam-Project/tree/main/html) for the 7 CRC cards with their description:
 1. [AssociationList](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/AssociationList.png)
 2. [DataCollectoin](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/DataCollection.png)
 3. [Detection](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/Detection.png)
