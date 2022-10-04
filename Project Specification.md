@@ -90,16 +90,22 @@ Shows the output of *DataCollection(datag, datad).get_label()*
 4. **/Genes**:
 Shows the output of *Detection(datag).genesymbol_detect()*
 
-5. **/SG**:
+5. **/InG**:
+Shows the output of *Registry().inputg()
+
+6. **/SG**:
 Shows the output of *Sentence(datag).findsentence_g()*
 
-6. **/Diseases**:
+7. **/Diseases**:
 Shows the output of *Detection(datad).diseasename_detect()*
 
-7. **/SD**:
+8. **/InD**: 
+Shows the output of *Registry().inputd()
+
+9. **/SD**:
 Shows output of *Sentence(datad).findsentence_d()*
 
-8. **/Top**:
+10. **/Top**:
 Shows output of *TopTen(datag, datad).top_ten()*
 
 9. **/GetoDis**:
