@@ -38,9 +38,9 @@ In order to do that, we created a new dataframe dfg, which was then sorted to df
 
 This function works in the same way as the previous one.
 
-3.**Inputg**: this class has only the function ***list_genes*** which returns the list of the genes *list_gene* thanks to the 2 built-in functions *drop_duplicates* and *tolist* which remove the duplicates and converts the columns of the dataframe into a list.
+3. **Inputg**: this class has only the function ***list_genes*** which returns the list of the genes *list_gene* thanks to the 2 built-in functions *drop_duplicates* and *tolist* which remove the duplicates and converts the columns of the dataframe into a list.
 
-4.**Inputd**: this class has only the function ***list_diseases*** which returns the list of the diseases *list_diseases* thanks to the 2 built-in functions *drop_duplicates* and *tolist* which remove the duplicates and converts the columns of the dataframe into a list.
+4. **Inputd**: this class has only the function ***list_diseases*** which returns the list of the diseases *list_diseases* thanks to the 2 built-in functions *drop_duplicates* and *tolist* which remove the duplicates and converts the columns of the dataframe into a list.
 
 
 5. **Sentence**: this class takes a dataframe and an input n from the user. It performs 2 different operations:
@@ -64,19 +64,30 @@ We also used a Pandas built-in-function *.iloc[: , :]* to slice by position from
 
 At the end we used the function *to_html* to visualize the dataframe as a chart in the html visualization, adding the output directly to the html code.
 
-7. **AssociationList**: this class merges the two datasets (datag, datad) and performs one operation through the method association().
+7. **AssociationList**: this class merges the two datasets (datag, datad) and performs two operations through the method *associationgenes()* and *associationdisease()*.
 
-- ***association()***: it takes the user input (*inputs*) and looks for its presence in the lists of id (*id_lists*) and names of both diseases and genes (*symbol_list*).
+- ***associationgenes()***: it takes the user input (gene id or gene symbol) and looks for its presence in the lists of id (*id_lists*) and in the list of symbols (*symbol_list*).
 
 If the input is in one of the lists, it iterates with *.itertuples()* over the rows of the merged dataset (stringresult) looking for a row corresponding to the input in one of the 4 columns. 
 
 *Stringresult* comes from the merged dataset *result*, which was then converted into a string format thanks to *.astype(***str***)*.
 
-If the match is found in a disease name or ID, the corresponding gene symbol is appended to the list *gene_list* (if not already present).
+If the match is found, the corresponding disease name is appended to the list *disease_list* (if not already present).
 
-If the match is found in a gene symbol or ID, the corresponding disease name is appended to the list *disease_list* (if not already present). 
+At the end the final list *disease_list* is returned.
 
-At the end *final_list* is chosen and returned to the user.
+- ***associationdisease()***: it takes the user input (disease id or disease name) and looks for its presence in the lists of id (*id_disease*) and in the list of names (*diseasename*).
+
+If the input is in one of the lists, it iterates with *.itertuples()* over the rows of the merged dataset (stringresult) looking for a row corresponding to the input in one of the 4 columns. 
+
+*Stringresult* comes from the merged dataset *result*, which was then converted into a string format thanks to *.astype(***str***)*.
+
+If the match is found, the corresponding gene symbol is appended to the list *gene_list* (if not already present).
+
+At the end the final list *gene_list* is returned.
+
+
+
 
 ## *progettopart3.py*
 [Progettopart3.py](https://github.com/cristina2300/Exam-Project/blob/main/progettopart3.py) is the last file of the code that imports part1 (Registry). 
