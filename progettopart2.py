@@ -108,7 +108,7 @@ class TopTen:
         result = pd.DataFrame.merge(self.__datag, self.__datad)
         grouped = result.groupby(by = ["geneid","gene_symbol", "diseaseid", "disease_name"]).size().reset_index(name = 'counts').sort_values('counts', ascending = False)
         final_sorted = grouped.iloc[0:10, :]
-        return final_sorted.to_html()  
+        return final_sorted
      
 class AssociationList:
     def __init__(self, datag, datad):
