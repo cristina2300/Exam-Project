@@ -17,11 +17,11 @@ Afterwards we defined the class and all the possible operations carried out on t
 
 
 ## *progettopart2.py*
-[Progettopart2.py](https://github.com/cristina2300/Exam-Project/blob/main/progettopart2.py) contains 5 different classes. 
+[Progettopart2.py](https://github.com/cristina2300/Exam-Project/blob/main/progettopart2.py) contains 7 different classes. 
 
 Each one has: the mandatory function *__init__()*, which is called constructor and can take multiple arguments; and additional specific functions. 
 
-The 5 classes are:
+The 7 classes are:
 
 1. **DataCollection**: this class has the two datasets as input, contains two operations which are *shape()* and *get_label()* both returning lists.
 
@@ -38,7 +38,12 @@ In order to do that, we created a new dataframe dfg, which was then sorted to df
 
 This function works in the same way as the previous one.
 
-3. **Sentence**: this class takes a dataframe and an input n from the user. It performs 2 different operations:
+3.**Inputg**: this class has only the function ***list_genes*** which returns the list of the genes *list_gene* thanks to the 2 built-in functions *drop_duplicates* and *tolist* which remove the duplicates and converts the columns of the dataframe into a list.
+
+4.**Inputd**: this class has only the function ***list_diseases*** which returns the list of the diseases *list_diseases* thanks to the 2 built-in functions *drop_duplicates* and *tolist* which remove the duplicates and converts the columns of the dataframe into a list.
+
+
+5. **Sentence**: this class takes a dataframe and an input n from the user. It performs 2 different operations:
 
 - ***findsentence_d()***: this function, given a disease name (*disease_name*) or disease ID (*diseasesid*) in input by the user, returns a list of the sentences related to that disease.
 - ***findsentence_g()***: this function, given a gene name (*gene_symbol*) or gene ID (*geneid*) in input by the user, returns a list of the sentences related to that gene. 
@@ -49,7 +54,7 @@ We also used *.itertuples()* to iterate over the dataframe rows as tuples.
 
 All of the values in the dataframe are transformed in a string format to avoid type errors, because the input from the user will be a string type object.
 
-4. **TopTen**: this class takes in input both datasets (*datag*, *datad*) and the method *top_ten()*.
+6. **TopTen**: this class takes in input both datasets (*datag*, *datad*) and the method *top_ten()*.
 
 - ***top_ten()***: it returns a new dataframe containing 4 columns and 10 rows, corresponding to the 10 most abundant associations between genes and diseases.
 
@@ -57,7 +62,9 @@ We used *groupby()*, which groups the data according to the categories and appli
 
 We also used a Pandas built-in-function *.iloc[: , :]* to slice by position from first row to the tenth.
 
-5. **AssociationList**: this class merges the two datasets (datag, datad) and performs one operation through the method association().
+At the end we used the function *to_html* to visualize the dataframe as a chart in the html visualization, adding the output directly to the html code.
+
+7. **AssociationList**: this class merges the two datasets (datag, datad) and performs one operation through the method association().
 
 - ***association()***: it takes the user input (*inputs*) and looks for its presence in the lists of id (*id_lists*) and names of both diseases and genes (*symbol_list*).
 
@@ -90,23 +97,35 @@ Shows the output of *DataCollection(datag, datad).get_label()*
 4. **/Genes**:
 Shows the output of *Detection(datag).genesymbol_detect()*
 
-5. **/SG**:
-Shows the output of *Sentence(datag).findsentence_g()*
+5.**/InG**:
+Shows the output of *Inputg(datag).list_genes()*
 
-6. **/Diseases**:
+6. **/SG**:
+Shows the output of *Sentence(datag)*
+
+7. **/Diseases**:
 Shows the output of *Detection(datad).diseasename_detect()*
 
-7. **/SD**:
-Shows output of *Sentence(datad).findsentence_d()*
+8.**/InD**:
+Shows the output of *Inputd(datad).list_diseases()*
 
-8. **/Top**:
+9. **/SD**:
+Shows output of *Sentence(datad)
+
+10. **/Top**:
 Shows output of *TopTen(datag, datad).top_ten()*
 
-9. **/GetoDis**:
-Shows the output of *AssociationList(datag).association()*
+11.**/InGetoDis**:
+Shows the output of *Inputg(datag).list_genes()*
 
-10. **/DistoGe**:
-Shows the output of *AssociationList(datad).association()*
+12. **/GetoDis**:
+Shows the output of *AssociationList(datag)
+
+13.**/InDistoGe**:
+Shows the output of *Inputd(datad).list_diseases()*
+
+14. **/DistoGe**:
+Shows the output of *AssociationList(datad)
 
 ## HTML pages 
 
@@ -139,11 +158,13 @@ We created a [folder](https://github.com/cristina2300/Exam-Project/tree/main/htm
 1. [AssociationList](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/AssociationList.png)
 2. [DataCollectoin](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/DataCollection.png)
 3. [Detection](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/Detection.png)
-4. [Sentence](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/Sentence.png)
-5. [TopTen](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/TopTen.png)
+4. [Inpug](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/Inputg.png)
+5. [Inputd](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/Inputd.png)
+6. [Sentence](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/Sentence.png)
+7. [TopTen](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/TopTen.png)
 
 ## UML diagram 
-Finally we created the [UML diagram](https://github.com/cristina2300/Exam-Project/blob/main/UML%20diagram.jpeg) with Visual Paradigm.
+Finally we created the [UML diagram](https://github.com/cristina2300/Exam-Project/blob/main/UMLdiagram.jpg) with Visual Paradigm.
 
 It represents the relationships among the classes created in *progettopart2.py* with the main and only class of *progettopart1.py* **Registry**.
 
