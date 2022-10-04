@@ -110,7 +110,7 @@ Shows the output of *AssociationList(datad).association()*
 
 ## HTML pages 
 
-The folder [html templates](https://github.com/cristina2300/Exam-Project/tree/main/html) contains all the HTML pages:
+The folder [html templates](https://github.com/cristina2300/Exam-Project/tree/main/html%20templates) contains all the HTML pages:
 
 - [1homepage.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/1homepage.html)
 - [2metadata.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/2metadata.html)
