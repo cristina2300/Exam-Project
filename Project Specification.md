@@ -165,7 +165,7 @@ Each of them is composed of:
 
 
 ## CRC cards
-We created a [folder](https://github.com/cristina2300/Exam-Project/tree/main/html) for the 7 CRC cards with their description:
+We created a [folder](https://github.com/cristina2300/Exam-Project/tree/main/CRCcards) for the 7 CRC cards with their description:
 1. [AssociationList](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/AssociationList.png)
 2. [DataCollectoin](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/DataCollection.png)
 3. [Detection](https://github.com/cristina2300/Exam-Project/blob/main/CRCcards/Detection.png)
