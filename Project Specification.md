@@ -116,7 +116,7 @@ The folder [html templates](https://github.com/cristina2300/Exam-Project/tree/ma
 - [2metadata.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/2metadata.html)
 - [3semantics.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/3semantics.html)
 - [4genes.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/4genes.html)
-- [inputgenesentences](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputgenesentences.html)
+- [inputgenesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputgenesentences.html)
 - [5genesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/5genesentences.html)
 - [6diseases.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/6diseases.html)
 - [inputdiseasesentences.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputdiseasesentences.html)
@@ -124,7 +124,7 @@ The folder [html templates](https://github.com/cristina2300/Exam-Project/tree/ma
 - [8top10.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/8top10.html)
 - [inputgenetodisease.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputgenetodisease.html)
 - [9genetodisease.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/9genetodisease.html)
-- [inputdiseasetogene](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputdiseasetogene.html)
+- [inputdiseasetogene.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/inputdiseasetogene.html)
 - [10diseasetogene.html](https://github.com/cristina2300/Exam-Project/blob/main/html%20templates/10diseasetogene.html)
 
 Each of them is composed of:
